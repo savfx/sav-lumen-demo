@@ -8,7 +8,7 @@ class HomeController extends Controller
     {
         return $ctx->outputSchema->create([
           "name" => "jetiny",
-          "version" => "1.0.3",
+          "version" => "dev",
         ]);
     }
 }

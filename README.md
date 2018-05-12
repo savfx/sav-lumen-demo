@@ -4,11 +4,9 @@
 
 ```
 before_script:
-  - composer global require "laravel/lumen-installer"
-  - lumen new blog
+  - composer create-project --prefer-dist laravel/lumen=5.5 blog
   - php sync.php
-  - cd blog && composer install --no-interaction
-  - cd blog && composer require savfx/savphp
+  - composer require savfx/savphp -d blog
 script:
-  - cd blog && composer test
+  - ./blog/vendor/bin/phpunit -c blog/phpunit.xml
 ```

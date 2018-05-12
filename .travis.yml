@@ -6,6 +6,6 @@ php:
 before_script:
   - composer create-project --prefer-dist laravel/lumen=5.5 blog
   - php sync.php
-  - `cd blog && composer require savfx/savphp`
+  - composer require savfx/savphp -d blog
 script:
-  - `cd blog && phpunit`
+  - ./blog/vendor/bin/phpunit -c blog/phpunit.xml

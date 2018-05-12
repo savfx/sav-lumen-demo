@@ -6,5 +6,7 @@
             "email": "86267344@qq.com"
         }
     ],
-    "require": {}
+    "require": {
+        "savfx/savphp": "1.0.4"
+    }
 }
