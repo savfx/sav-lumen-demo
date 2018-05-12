@@ -4,8 +4,7 @@ language: php
 php:
   - 7.0
 before_script:
-  - composer global require "laravel/lumen-installer"
-  - lumen new blog
+  - composer create-project --prefer-dist laravel/lumen blog
   - php sync.php
   - cd blog && composer install --no-interaction
   - cd blog && composer require savfx/savphp
