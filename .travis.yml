@@ -4,9 +4,8 @@ language: php
 php:
   - 7.0
 before_script:
-  - composer create-project --prefer-dist laravel/lumen blog
+  - composer create-project --prefer-dist laravel/lumen=5.5 blog
   - php sync.php
-  - cd blog && composer install --no-interaction
-  - cd blog && composer require savfx/savphp
+  - `cd blog && composer require savfx/savphp`
 script:
-  - cd blog && composer test
+  - `cd blog && phpunit`
