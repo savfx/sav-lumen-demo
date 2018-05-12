@@ -1,8 +1,8 @@
-# sav-lumen-demo
-
-### ci
-
-```
+sudo: required
+dist: trusty
+language: php
+php:
+  - 7.0
 before_script:
   - composer global require "laravel/lumen-installer"
   - lumen new blog
@@ -11,4 +11,3 @@ before_script:
   - cd blog && composer require savfx/savphp
 script:
   - cd blog && composer test
-```
