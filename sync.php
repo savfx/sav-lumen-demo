@@ -5,11 +5,12 @@ file_put_contents("blog/tests/HomeTest.php", file_get_contents("tests/HomeTest.p
 file_put_contents("blog/app/Http/Controllers/HomeController.php", file_get_contents("app/Http/Controllers/HomeController.php"));
 
 is_dir("blog/contract") || mkdir("blog/contract");
-is_dir("blog/contract/schemas") || mkdir("blog/contract/schemas");
+is_dir("blog/contract/php") || mkdir("blog/contract/php");
+is_dir("blog/contract/php/schemas") || mkdir("blog/contract/php/schemas");
 
-file_put_contents("blog/contract/contract.php", file_get_contents("contract/contract.php"));
+file_put_contents("blog/contract/php/contract.php", file_get_contents("contract/contract.php"));
 
-file_put_contents("blog/contract/schemas/HomeAbout.php", file_get_contents("contract/schemas/HomeAbout.php"));
+file_put_contents("blog/contract/php/schemas/HomeAbout.php", file_get_contents("contract/schemas/HomeAbout.php"));
 
 $appPhp = file_get_contents("blog/bootstrap/app.php");
 

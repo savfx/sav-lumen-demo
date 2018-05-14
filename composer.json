@@ -5,8 +5,5 @@
             "name": "jetiny",
             "email": "86267344@qq.com"
         }
-    ],
-    "require": {
-        "savfx/savphp": "1.0.4"
-    }
+    ]
 }
